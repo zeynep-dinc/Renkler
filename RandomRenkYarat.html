@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Renk Kodları ve Tabloları
+        </title>
+        <style>
+            #sirala {
+                margin: 5px;
+                padding: 5px;
+                width:75px;
+                height: 85px;
+            }
+        </style>
+    </head>
+
+    <body> 
+        <div id="sirala">
+            <input type="text" id="kacTane" placeholder="Kaç Tane">
+            <input type="button" id="ara" onclick="yarat('kacTane')" value="Yarat">  
+        </div>
+        <script>
+            var a,b,x,y,z;
+
+            function yarat(sayi){
+                b=document.getElementById(sayi).value;
+                    for(var k=0;k<b;k++){
+                        for(let j=0;j<2;j++)
+                        {
+                            x=Math.floor(Math.random()*10);
+                            y=Math.floor(Math.random()*10);
+                            z=Math.floor(Math.random()*10);
+                        }
+                        a=document.createElement("SPAN");
+                        a.innerHTML="<br><br>";
+                        a.style.background="#"+x+y+z;
+                        a.style.height="300px";
+                        a.style.margin="5px 5px";
+                        a.style.padding="5px 5px";
+                        a.style.fontSize="20px";
+                        a.innerHTML="#"+x+y+z+"<br>";
+                        document.body.appendChild(a);
+                            }
+
+                   }                
+        </script>
+    </body>
+</html>

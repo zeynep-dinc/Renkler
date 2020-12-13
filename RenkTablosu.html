@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Renk Kodları ve Tabloları
+        </title>
+        <style>
+            #sirala span{
+                margin: 5px;
+                padding: 5px;
+                width:75px;
+                height: 35px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="text" id="arat" placeholder="#Renk kodu">
+        <input type="button" id="ara" onclick="bul('arat')" value="Bul">
+        <span id="hadiB"></span>
+        <div id="sirala">
+    
+<label onclick="skala()">Renk Skalasını Getir </label>
+<br>
+<br>
+        <script>
+            var a,b;
+            function bul(kod){
+                b=document.getElementById(kod).value;
+                a=document.getElementById("hadiB");
+                a.style.backgroundColor="#"+b;
+                a.innerHTML=b+" degeri rengi bu";
+            }
+
+            function skala(){
+            for(let i=0;i<16;i++){
+                for(let j=0;j<16;j++){
+                    for(var k=0;k<16;k++){
+                        a=document.createElement("SPAN");
+                        a.style.background="#"+i+j+k;
+                        a.style.margin="25px 5px";
+                        a.style.padding="5px 5px";
+                        a.style.fontSize="20px";
+                        a.innerHTML="#"+i+j+k;
+                        document.body.appendChild(a);
+                        if(k===15)
+                        a.innerHTML="#"+i+j+k+"<br>";
+                    }
+
+                   }                
+            }
+        }
+        </script>
+        </div>
+    </body>
+</html>
