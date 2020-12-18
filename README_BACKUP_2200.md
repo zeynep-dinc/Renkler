@@ -1,3 +1,6 @@
+
+
+
 # Renkler
 <<<<<<< HEAD
 <<<<<<< HEAD
